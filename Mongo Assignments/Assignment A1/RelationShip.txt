@@ -1,0 +1,140 @@
+1.) db.users.find({},{username: 1}).pretty()
+
+2.) db.posts.find().pretty()
+{
+        "_id" : ObjectId("60a5595b5bd4c8bd15122f0f"),
+        "username" : "GoodGuyGeg",
+        "title" : "Passes out at party",
+        "body" : "Wakes up early and cleans house"
+}
+{
+        "_id" : ObjectId("60a559b05bd4c8bd15122f10"),
+        "username" : "GoodGuyGeg",
+        "title" : "Steals your identity",
+        "body" : "Raises your credit score"
+}
+{
+        "_id" : ObjectId("60a559ba5bd4c8bd15122f11"),
+        "username" : "GoodGuyGeg",
+        "title" : "Reports a bug in your code",
+        "body" : "Sends you a Pull Request"
+}
+{
+        "_id" : ObjectId("60a559d05bd4c8bd15122f12"),
+        "username" : "ScumBagSteve",
+        "title" : "Borrows something",
+        "body" : "Sells it"
+}
+{
+        "_id" : ObjectId("60a559ee5bd4c8bd15122f13"),
+        "username" : "ScumBagSteve",
+        "title" : "Borrows everything",
+        "body" : "The end"
+}
+{
+        "_id" : ObjectId("60a559ff5bd4c8bd15122f14"),
+        "username" : "ScumBagSteve",
+        "title" : "Forks your repo on github",
+        "body" : "Sets to private"
+ 3.) db.posts.find({username: "GoodGuyGeg"}).pretty()
+{
+        "_id" : ObjectId("60a5595b5bd4c8bd15122f0f"),
+        "username" : "GoodGuyGeg",
+        "title" : "Passes out at party",
+        "body" : "Wakes up early and cleans house"
+}
+{
+        "_id" : ObjectId("60a559b05bd4c8bd15122f10"),
+        "username" : "GoodGuyGeg",
+        "title" : "Steals your identity",
+        "body" : "Raises your credit score"
+}
+{
+        "_id" : ObjectId("60a559ba5bd4c8bd15122f11"),
+        "username" : "GoodGuyGeg",
+        "title" : "Reports a bug in your code",
+        "body" : "Sends you a Pull Request"
+
+4.) db.posts.find({username: "ScumBagSteve"}).pretty()
+{
+        "_id" : ObjectId("60a559d05bd4c8bd15122f12"),
+        "username" : "ScumBagSteve",
+        "title" : "Borrows something",
+        "body" : "Sells it"
+}
+{
+        "_id" : ObjectId("60a559ee5bd4c8bd15122f13"),
+        "username" : "ScumBagSteve",
+        "title" : "Borrows everything",
+        "body" : "The end"
+}
+{
+        "_id" : ObjectId("60a559ff5bd4c8bd15122f14"),
+        "username" : "ScumBagSteve",
+        "title" : "Forks your repo on github",
+        "body" : "Sets to private"
+
+5.) db.comments.find({},{post: 0}).pretty()
+{
+        "_id" : ObjectId("60a55c6f5bd4c8bd15122f15"),
+        "username" : "GoodGuyGeg",
+        "comment" : "Hope you got a good deal!"
+}
+{
+        "_id" : ObjectId("60a55c845bd4c8bd15122f16"),
+        "username" : "GoodGuyGeg",
+        "comment" : "What's mine is yours"
+}
+{
+        "_id" : ObjectId("60a55ca05bd4c8bd15122f17"),
+        "username" : "GoodGuyGeg",
+        "comment" : "Don't violate the licensing agreement!"
+}
+{
+        "_id" : ObjectId("60a55cb55bd4c8bd15122f18"),
+        "username" : "ScumBagSteve",
+        "comment" : "It still isn't clean"
+}
+{
+        "_id" : ObjectId("60a55ce95bd4c8bd15122f19"),
+        "username" : "ScumBagSteve",
+        "comment" : "Denied your PR cause I found a hack
+
+
+6.)db.comments.find({username: "GoodGuyGeg"},{post: 0}).pretty()
+{
+        "_id" : ObjectId("60a55c6f5bd4c8bd15122f15"),
+        "username" : "GoodGuyGeg",
+        "comment" : "Hope you got a good deal!"
+}
+{
+        "_id" : ObjectId("60a55c845bd4c8bd15122f16"),
+        "username" : "GoodGuyGeg",
+        "comment" : "What's mine is yours"
+}
+{
+        "_id" : ObjectId("60a55ca05bd4c8bd15122f17"),
+        "username" : "GoodGuyGeg",
+        "comment" : "Don't violate the licensing agreement!"
+
+ 7.) MongoDB Enterprise atlas-ctv9kp-shard-0:PRIMARY> db.comments.find({username: "ScumBagSteve"},{post: 0}).pretty()
+{
+        "_id" : ObjectId("60a55cb55bd4c8bd15122f18"),
+        "username" : "ScumBagSteve",
+        "comment" : "It still isn't clean"
+}
+{
+        "_id" : ObjectId("60a55ce95bd4c8bd15122f19"),
+        "username" : "ScumBagSteve",
+        "comment" : "Denied your PR cause I found a hack"
+}
+
+
+
+8.)db.comments.find({post: "60a559ba5bd4c8bd15122f11"},{post: 0}).pretty()
+{
+        "_id" : ObjectId("60a55ce95bd4c8bd15122f19"),
+        "username" : "ScumBagSteve",
+        "comment" : "Denied your PR cause I found a hack"
+}
+MongoDB Enterprise atlas-ctv9kp-shard-0:PRIMARY>

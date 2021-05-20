@@ -1,0 +1,36 @@
+FIND TEXT
+db.movies.createIndex({synopsis: "text"})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "commitQuorum" : "votingMembers",
+        "ok" : 1,
+        "$clusterTime" : {
+                "clusterTime" : Timestamp(1621443172, 7),
+                "signature" : {
+                        "hash" : BinData(0,"vAL9W38w1ejGTOBqXLErGGehlYs="),
+                        "keyId" : NumberLong("6962569477795872770")
+                }
+        },
+        "operationTime" : Timestamp(1621443172, 7)
+}
+1.)db.movies.find({$text: {$search: "Bilbo"}}).pretty()
+
+2.)db.movies.find({$text: {$search: "Gandalf"}}).pretty()
+
+3.)db.movies.find({$text: {$search: "Bilbo   -Gandalf"}},{synopsis:1}).pretty()
+
+
+4.)db.movies.find({$text: {$search: "dwarwes hobbit"}},{synopsis:1}).pretty()
+
+5.) db.movies.find({$text: {$search: "gold dragon" }},{synopsis:1}).pretty()
+
+
+DELETE DOCUMENTS
+db.movies.remove({title: "Pee Wee Human's Big Adventure"})
+WriteResult({ "nRemoved" : 1 })
+MongoDB Enterprise >db.movies.remove({title: "Avatar"})
+WriteResult({ "nRemoved" : 1 })
+
+
