@@ -34,32 +34,41 @@
 			padding: 0;
 		}*/
         main {
-            grid-column: 1 / 6;
+            grid-column: 3/ 6;
            grid-row:  2 / 6;
         }
         header{
             grid-column: 1 / 13;
             grid-row: 1 / 2;
-            background: #e72907;
+            background:transparent;
             position: relative;
-            font-weight: 900;
-            border: 4px, solid grey;
-            
-         
-            
-           font-size: 48px;
+            font-size: 48px;
            
         }
-        /*p{
+        h1{
+            background:rgb(62, 62, 240);
+            padding: 4px;
+            margin-top: 2px;
             display: inline;
-            font-weight: 900;
-            border: 4px, solid grey;
-            position: absolute;
+            border: 2px solid rgb(62, 62 ,240);
+            opacity: 0.9;
+            border-radius: 50;
+        }
+        
+        
+         .highlight{
+        
             
-            text-indent: inherit;
+            padding: 50px;
+            background-color:grey ;
+            opacity: 0.5;
+            border-radius: 30px;
+            text-align: left;
+        
             
-           font-size: 48px;
-        }*/
+           font-size: 32px;
+        }
+    
         section {
             grid-column: 6 / 10;
            grid-row:  2 / 4;
@@ -70,11 +79,11 @@
         }
         aside {
             grid-column: 8 / 13;
-           grid-row:  4 / 8;
+           grid-row:  4 / 7;
         }
         .aman {
-            grid-column: 4 / 8;
-           grid-row:  6 / 8;
+            grid-column: 3 / 8;
+           grid-row:  6 / 7;
         }
         footer{
             grid-column: 1 / 13;
@@ -88,6 +97,18 @@
             top: 0;
            
           
+        }
+        .aman2{
+            grid-column: 10 /13 ;
+            grid-row: 2 / 6;
+            align-items: top;
+            justify-self: center;
+        }
+        span{
+            font-weight: bold;
+            font-size: 36px;
+            font-family: cursive;
+            padding-top: 0;
         }
         li{
         
@@ -105,11 +126,48 @@
     }
     img{
         
-      
+        
+        margin: 4px;
         height: 100%;
         width: 100%;
         background-size:cover ;
     }
+   .Menu{
+       background:transparent;
+       grid-column: 1/3;
+       grid-row: 2/3;
+       background-attachment:fixed;
+       white-space: none;
+
+   }
+   /*.s{
+       display:grid;
+       
+       white-space: pre-wrap;
+       padding: 40px;
+       font-size: 30px;
+       
+       color: #fff;
+   }*/
+   a{
+       color: #fff;
+   }
+  
+  
+   h2{
+    padding: 50px;
+            background-color:grey ;
+            opacity:10;
+            border-radius: 30px;
+            text-align: left;
+   }
+   a[href=""]{
+       text-decoration: none;
+       color: #fff;
+       
+   }
+
+   
    
         
    </style>
@@ -121,13 +179,29 @@
 
         <div id="content">
     
-            <header >Aman Photography</header>
+            <header><h1>Aman Photography</h1></header>
             
             <main><img src="Aman.jpg"></main>
             <section><img src="aman2.jpg"></section>
+            <section class="aman2">
+                
+                    <span style="color: #e72907;"> 
+                        My work
+                    </span><br>
+                   ,<p  class="highlight">Glimpses of my work
+                </p>
+            </section>
             <aside><img src="aman4.jpg"></aside>
             <aside class="aman"><img src="aman3.jpg"></aside>
             <nav><img src="download.jpg"></nav>
+            <nav class="Menu">
+                
+                    
+                
+                    <p><a href="" ><h2>Personal Information</h2></a><br></p>
+                    <p><a href=""><h2> More work Portfolios</h2></a></p>
+                
+            </nav>
            
             <footer style="background-color: gray;">
                 <span style="text-decoration: underline;">Contact Us</span> 
