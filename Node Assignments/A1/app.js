@@ -123,3 +123,28 @@ var x = process.argv.slice(2);
 console.log(`Hello ${x}`);
 
 
+
+
+//express
+
+const express = require("express");
+const app = express();
+const port = 8000;
+
+app.get("/",(req,res)=>{
+    res.send("Hello world!");
+});
+
+app.listen(8000,() => {
+    console.log("Listening from port 8000");
+});
+
+const express = require('express');
+const app = express();
+app.get('/year', (req, res) => {
+    var age = req.query.age;
+    var currentDate = new Date();
+    var birthYear = currentDate.getFullYear() - age;
+    console.log(birthYear);
+});
+
