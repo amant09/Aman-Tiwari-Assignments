@@ -21,8 +21,6 @@ console.log(readFile);
 
 //Q3
 
-
-
 fs.readdir(__dirname , (err , files)=> {
     
     if(err){
@@ -46,7 +44,6 @@ console.log('The file was saved!');
 
 
 //Q5
-
 
 var count = 0;
 var search = fs.readFileSync('test.txt', 'utf8');
@@ -86,14 +83,13 @@ const today = moment();
 console.log(`Today is: ${today.format('dddd Do MMMM, YYYY, HH:MM:SS a')} , ${calculator.sum(3,7)} ${calculator.multiply(3,7)} `)
 
 //Q7 
-
+var strftime = require('strftime');
+console.log(strftime('%B %d, %Y %H:%M:%S'))
 
 
 
 
 //Q8
-
-
 
 var readIntegers = fs.readFileSync('./test.txt', 'utf8');
 var str = new String(readIntegers);
@@ -104,11 +100,18 @@ var sum = 0;
 for(var i in arr){
   sum = sum + arr[i] ;
 }
-
 //console.log(arr);
 console.log(sum)
 
 //Q9
+
+var concat = require('concat-stream');
+ 
+var readStream = fs.createReadStream('download.jpg');
+var concatStream = concat(gotPicture);
+ 
+readStream.on('error', handleError);
+console.log(readStream.pipe(concatStream));
 
 
 
