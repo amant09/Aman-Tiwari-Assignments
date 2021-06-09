@@ -11,14 +11,14 @@ greetPerson("Aman");*/
 //Question1
 
 const myVar = 10;
-myVar = 21;
+myVar = 21; // displays error
 
 //Q 2
 let myVar2 = 2;
 if(myVar2 === 2){
     let myVar3 = 4;
 }
-console.log(myVar3)
+console.log(myVar3)  // logs error myVar3 not defined
 
 
 //Q 3
